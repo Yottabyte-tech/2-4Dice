@@ -1,5 +1,6 @@
 {
   "name": "two-four_dice",
+  "homepage": "https://yottabyte-tech.github.io/2-4Dice/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +8,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "add": "git add .",
+    "commit": "git commit -m 'update'",
+    "gitpush": "git push origin main",
+    "push": "npm run add && npm run commit && npm run gitpush && npm run deploy"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
